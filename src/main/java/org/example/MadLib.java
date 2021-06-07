@@ -3,27 +3,19 @@ package org.example;
 import java.util.Scanner;
 
 /**
- * Hello world!
- *
+ * UCF COP3330 Summer 2021 Assignment 1 Solutions
+ *  *  *  Copyright 2021 Vincent Verapen
  */
 public class MadLib
 {
     public static void main( String[] args )
     {
-        Scanner noun = new Scanner(System.in);
-        Scanner verb = new Scanner(System.in);
-        Scanner adjective = new Scanner(System.in);
-        Scanner adverb = new Scanner(System.in);
-        System.out.println( "Please enter an noun: " );
-        String newNoun = noun.next();
-        System.out.println("Please enter an verb: ");
-        String newVerb = verb.next();
-        System.out.println("Please enter an adjective: ");
-        String newAdjective = adjective.next();
-        System.out.println("Please enter an adverb: ");
-        String newAdverb = adverb.next();
         Story create = new Story();
-        String newStory = create.story(newNoun, newVerb, newAdjective, newAdverb);
+        String noun = create.getNoun();
+        String verb = create.getVerb();
+        String adjective = create.getAdjective();
+        String adverb = create.getAdverb();
+        String newStory = create.story(noun, verb, adjective, adverb);
         System.out.println(newStory);
     }
 }
